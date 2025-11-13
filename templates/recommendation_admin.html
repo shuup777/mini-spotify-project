@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Rekomendasi - Mini Spotify</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Halaman Admin Rekomendasi</h1>
+    <p>Berikut rekomendasi artis untuk user:</p>
+
+    <table border="1" cellpadding="8">
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>Rekomendasi Artis</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user, recs in recommendations.items() %}
+            <tr>
+                <td>{{ user }}</td>
+                <td>{{ recs | join(', ') }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <br>
+    <a href="/">← Kembali ke Home</a>
+</body>
+</html>
