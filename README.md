@@ -6,5 +6,3 @@ Proyek Tugas Kelompok - Aplikasi streaming musik sederhana berbasis Flask
 2. Lidya — Sistem Artis
 3. Farrel — Admin Keuangan
 4. Pasha — Admin Sistem & Rekomendasi
-
-## 📂 Struktur Folder
