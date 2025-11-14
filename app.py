@@ -15,9 +15,6 @@ like_manager.add_like("user2", "Nadin Amizah")
 def home():
     return "Hello, Flask sudah berjalan!"
 
-if __name__ == '__main__':
-    app.run(debug=True)
-
 @app.route("/admin/recommendation")
 def admin_recommendation():
     recommendations = {
