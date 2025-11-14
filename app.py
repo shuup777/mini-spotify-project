@@ -11,6 +11,13 @@ recommendation_system = RecommendationSystem(like_manager)
 like_manager.add_like("user1", "Tulus")
 like_manager.add_like("user2", "Nadin Amizah")
 
+@app.route('/')
+def home():
+    return "Hello, Flask sudah berjalan!"
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
 @app.route("/admin/recommendation")
 def admin_recommendation():
     recommendations = {
