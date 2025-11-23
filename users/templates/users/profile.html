@@ -1,0 +1,17 @@
+<!-- users/templates/users/profile.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+</head>
+<body>
+    <h2>Profil Anda</h2>
+    <p>Nama Tampilan: {{ user.profile.display_name }}</p>
+    <p>Bio: {{ user.profile.bio }}</p>
+    <p>Langganan: {{ user.subscription }}</p>
+    <p>Theme: {{ user.preferences.theme }}</p>
+    <p>Audio Quality: {{ user.preferences.audio_quality }}</p>
+    <a href="{% url 'users:update_profile' %}">Edit Profil</a>
+    <a href="{% url 'users:logout' %}">Logout</a>
+</body>
+</html>
